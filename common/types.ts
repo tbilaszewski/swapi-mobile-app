@@ -1,3 +1,5 @@
+import { PeopleResponse, SpaceshipResponse } from "../repository/model";
+
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
