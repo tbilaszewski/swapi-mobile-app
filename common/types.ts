@@ -17,3 +17,7 @@ export type TabOneParamList = {
 export type TabTwoParamList = {
   StarshipsScreen: undefined;
 };
+
+export type PeopleWithMass = Pick<PeopleResponse, "mass">;
+
+export type StarshipsWithCrew = Pick<SpaceshipResponse, "crew">;
