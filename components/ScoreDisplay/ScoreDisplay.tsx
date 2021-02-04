@@ -13,7 +13,7 @@ export const ScoreDisplay = () => {
         <Avatar.Text size={48} label={`${scores[0] ?? ""}`} />
         <Text>Player 1</Text>
       </View>
-      <Text>:</Text>
+      <View style={styles.divider} />
       <View style={styles.playerInfo}>
         <Avatar.Text size={48} label={`${scores[1] ?? ""}`} />
         <Text>Player 2</Text>
@@ -24,16 +24,21 @@ export const ScoreDisplay = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 150,
-    padding: 10,
+    height: 100,
+    marginTop: 40,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "flex-end",
+    alignItems: "center",
     alignContent: "center",
   },
   playerInfo: {
     display: "flex",
     flexDirection: "column",
+  },
+  divider: {
+    width: 2,
+    backgroundColor: "gray",
+    height: 50,
   },
 });
