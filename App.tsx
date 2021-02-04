@@ -1,7 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Provider } from "react-redux";
 
+import { store } from "./store";
 import useCachedResources from "./hooks/useCachedResources";
 import Navigation from "./navigation";
 
@@ -13,8 +15,10 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation />
-        <StatusBar />
+        <Provider store={store}>
+          <Navigation />
+          <StatusBar />
+        </Provider>
       </SafeAreaProvider>
     );
   }

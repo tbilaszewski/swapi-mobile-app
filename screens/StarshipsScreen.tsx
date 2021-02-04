@@ -8,6 +8,8 @@ import { Nullable } from "../common/types";
 
 import api from "../repository";
 import { SpaceshipResponse } from "../repository/model";
+import { scoreSlice } from "../store/score.slice";
+import { useDispatch } from "react-redux";
 
 const loadRandomSpaceship = api.spaceships.getRandom;
 
@@ -16,6 +18,8 @@ export default function SpaceshipsScreen() {
   const [spaceships, setSpaceships] = useState<
     Nullable<[SpaceshipResponse, SpaceshipResponse]>
   >();
+
+  const dispatch = useDispatch();
 
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
 
@@ -39,7 +43,9 @@ export default function SpaceshipsScreen() {
 
   useEffect(() => {
     if (spaceships) {
-      setHighlightedIndex(findMaxCrewSize(spaceships));
+      const maxCrewIndex = findMaxCrewSize(spaceships);
+      dispatch(scoreSlice.actions.incrementScore(maxCrewIndex));
+      setHighlightedIndex(maxCrewIndex);
     }
   }, [spaceships]);
 

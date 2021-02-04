@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { View, StyleSheet } from "react-native";
 import { ActivityIndicator, Button } from "react-native-paper";
+import { useDispatch } from "react-redux";
 import { Nullable } from "../common/types";
 import { findHeaviest } from "../common/utils";
 import { CardNotFound, PeopleCard } from "../components";
 
 import api from "../repository";
 import { PeopleResponse } from "../repository/model";
+import { scoreSlice } from "../store/score.slice";
 
 const loadRandomPerson = api.people.getRandom;
 
@@ -17,6 +19,8 @@ export default function PeopleScreen() {
   >(null);
 
   const [heaviestIndex, setHeaviestIndex] = useState<number>(-1);
+
+  const dispatch = useDispatch();
 
   const loadTwoRandomPeople = useCallback(() => {
     setLoading(true);
@@ -38,7 +42,9 @@ export default function PeopleScreen() {
 
   useEffect(() => {
     if (people) {
-      setHeaviestIndex(findHeaviest(people));
+      const heaviestIndex = findHeaviest(people);
+      dispatch(scoreSlice.actions.incrementScore(heaviestIndex));
+      setHeaviestIndex(heaviestIndex);
     }
   }, [people]);
 
