@@ -1,1 +1,3 @@
-export * from "./PeopleCard/PeopleCard";
+export * from "./PeopleCard/";
+export * from "./SpaceshipCard/";
+export * from "./CardNotFound";

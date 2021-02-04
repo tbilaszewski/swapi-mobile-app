@@ -21,3 +21,5 @@ export type TabTwoParamList = {
 export type PeopleWithMass = Pick<PeopleResponse, "mass">;
 
 export type StarshipsWithCrew = Pick<SpaceshipResponse, "crew">;
+
+export type Nullable<T> = null | T;

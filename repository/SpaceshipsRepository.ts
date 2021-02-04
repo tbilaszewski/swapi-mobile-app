@@ -1,14 +1,14 @@
 import { AxiosInstance } from "axios";
-import { SpaceshipResponse } from "./model";
 import random from "lodash/random";
+import { SpaceshipResponse } from "./model";
 
-const SHIPS_COUNT = 41;
+const SHIPS_COUNT = 40;
 
 export default (axios: AxiosInstance) => ({
   getRandom: (): Promise<SpaceshipResponse> => {
     const randomId = random(SHIPS_COUNT);
     return axios
-      .get(`people/${randomId}`)
+      .get(`starships/${randomId}`)
       .then((response) => response.data as SpaceshipResponse);
   },
 });

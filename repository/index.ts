@@ -1,5 +1,6 @@
 import axios from "axios";
 import peopleRepository from "./PeopleRepository";
+import spaceshipsRepository from "./SpaceshipsRepository";
 
 const axiosInstance = axios.create({
   baseURL: "https://swapi.dev/api/",
@@ -9,4 +10,5 @@ const axiosInstance = axios.create({
 
 export default {
   people: peopleRepository(axiosInstance),
+  spaceships: spaceshipsRepository(axiosInstance),
 };
