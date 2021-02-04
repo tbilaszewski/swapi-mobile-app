@@ -20,6 +20,7 @@
     "@reduxjs/toolkit": "^1.5.0",
     "add": "^2.0.6",
     "axios": "^0.21.1",
+    "axios-cache-adapter": "^2.7.0",
     "expo": "~40.0.0",
     "expo-asset": "~8.2.1",
     "expo-constants": "~9.3.0",

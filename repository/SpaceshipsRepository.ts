@@ -4,11 +4,15 @@ import { SpaceshipResponse } from "./model";
 
 const SHIPS_COUNT = 40;
 
-export default (axios: AxiosInstance) => ({
-  getRandom: (): Promise<SpaceshipResponse> => {
+export default class {
+  constructor(private axios: AxiosInstance) {}
+
+  getRandom = (): Promise<SpaceshipResponse> => {
     const randomId = random(SHIPS_COUNT);
-    return axios
+
+    return this.axios
       .get(`starships/${randomId}`)
-      .then((response) => response.data as SpaceshipResponse);
-  },
-});
+      .then((response) => response.data as SpaceshipResponse)
+      .catch(() => this.getRandom());
+  };
+}
