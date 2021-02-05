@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 
-import PeopleScreen from "../screens/PeopleScreen";
-import StarshipsScreen from "../screens/StarshipsScreen";
+import { PeopleScreen } from "../screens/PeopleScreen";
+import { StarshipsScreen } from "../screens/StarshipsScreen";
 import {
   BottomTabParamList,
   TabOneParamList,

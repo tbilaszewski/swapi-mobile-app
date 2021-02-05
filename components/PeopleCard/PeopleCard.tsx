@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Title, Paragraph } from "react-native-paper";
+import { Card, Paragraph } from "react-native-paper";
 import { styles } from "../../common/styles";
-import { PeopleResponse } from "../../repository/model";
+import { CardData, isPeopleResponse } from "../../common/types";
 import { CardNotFound } from "../CardNotFound";
 
 interface PeopleCardProps {
-  data?: PeopleResponse;
+  data?: CardData;
   winner?: boolean;
 }
 
@@ -13,13 +13,14 @@ export const PeopleCard: React.FC<PeopleCardProps> = ({ data, winner }) => {
   return data ? (
     <Card style={[styles.container, winner ? styles.winnerCard : {}]}>
       <Card.Title title={data.name} />
-      <Card.Content>
-        <Title>{}</Title>
-        <Paragraph>Birth: {data.birth_year}</Paragraph>
-        <Paragraph>Gender: {data.gender}</Paragraph>
-        <Paragraph>Height: {data.height}</Paragraph>
-        <Paragraph>Mass: {data.mass}</Paragraph>
-      </Card.Content>
+      {isPeopleResponse(data) && (
+        <Card.Content>
+          <Paragraph>Birth: {data.birth_year}</Paragraph>
+          <Paragraph>Gender: {data.gender}</Paragraph>
+          <Paragraph>Height: {data.height}</Paragraph>
+          <Paragraph>Mass: {data.mass}</Paragraph>
+        </Card.Content>
+      )}
     </Card>
   ) : (
     <CardNotFound />

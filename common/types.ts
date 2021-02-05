@@ -23,3 +23,17 @@ export type PeopleWithMass = Pick<PeopleResponse, "mass">;
 export type StarshipsWithCrew = Pick<SpaceshipResponse, "crew">;
 
 export type Nullable<T> = null | T;
+
+export type Optional<T> = undefined | T;
+
+export type CardData = PeopleResponse | SpaceshipResponse;
+
+export const isPeopleResponse = (
+  response: CardData
+): response is PeopleResponse =>
+  (response as PeopleResponse).mass !== undefined;
+
+export const isSpaceshipResponse = (
+  response: CardData
+): response is SpaceshipResponse =>
+  (response as SpaceshipResponse).crew !== undefined;

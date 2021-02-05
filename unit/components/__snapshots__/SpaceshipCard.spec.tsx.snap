@@ -2,7 +2,6 @@
 
 exports[`SpaceshipCard should match snapshot  1`] = `
 <View
-  data-testid="people-card"
   style={
     Object {
       "backgroundColor": "#ffffff",
@@ -122,36 +121,6 @@ exports[`SpaceshipCard should match snapshot  1`] = `
         ]
       }
     >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#000000",
-              "fontFamily": "System",
-              "fontWeight": "400",
-              "textAlign": "left",
-            },
-            Array [
-              Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "System",
-                "fontWeight": "500",
-                "textAlign": "left",
-                "writingDirection": "ltr",
-              },
-              Array [
-                Object {
-                  "fontSize": 20,
-                  "letterSpacing": 0.15,
-                  "lineHeight": 30,
-                  "marginVertical": 2,
-                },
-                undefined,
-              ],
-            ],
-          ]
-        }
-      />
       <Text
         style={
           Array [
