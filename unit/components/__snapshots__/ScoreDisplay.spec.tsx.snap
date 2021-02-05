@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScoreDisplay should match snapshot  1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "height": 100,
+      "justifyContent": "space-around",
+      "marginTop": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#6200ee",
+            "borderRadius": 24,
+            "height": 48,
+            "width": 48,
+          },
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+                "lineHeight": 48,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        0
+      </Text>
+    </View>
+    <Text>
+      Player 1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "gray",
+        "height": 50,
+        "width": 2,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#6200ee",
+            "borderRadius": 24,
+            "height": 48,
+            "width": 48,
+          },
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+                "lineHeight": 48,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        0
+      </Text>
+    </View>
+    <Text>
+      Player 2
+    </Text>
+  </View>
+</View>
+`;

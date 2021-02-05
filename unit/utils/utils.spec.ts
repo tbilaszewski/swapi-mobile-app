@@ -3,7 +3,7 @@ import {
   findMaxCrewSize,
   findMaxValueIndex,
   parseValueToFloatNumber,
-} from "../utils";
+} from "../../common/utils";
 
 describe("utils", () => {
   describe("parseValueToFloatNumber", () => {

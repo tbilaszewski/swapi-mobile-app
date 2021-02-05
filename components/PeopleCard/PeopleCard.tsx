@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { Card, Title, Paragraph } from "react-native-paper";
+import { styles } from "../../common/styles";
 import { PeopleResponse } from "../../repository/model";
 import { CardNotFound } from "../CardNotFound";
 
@@ -25,15 +25,3 @@ export const PeopleCard: React.FC<PeopleCardProps> = ({ data, winner }) => {
     <CardNotFound />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    margin: 10,
-    flexGrow: 0,
-  },
-  winnerCard: {
-    borderColor: "green",
-    borderWidth: 5,
-  },
-});

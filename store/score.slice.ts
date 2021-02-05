@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ScoreState } from "./types";
 
-const initialState = {
+const initialState: ScoreState = {
   scores: [0, 0],
 };
 
